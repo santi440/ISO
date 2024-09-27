@@ -1,0 +1,8 @@
+#LA variable # muestra el numero de parametros pasados
+echo "$#"
+#La variable * Muestra todos los parametros pasados
+echo "$*"
+#La variable ? muestraresultado del ultimo script ejecutado 
+echo "$?"
+# La varible HOME muestra el directorio del usuario actual
+echo "$HOME"

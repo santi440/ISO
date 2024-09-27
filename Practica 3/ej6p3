@@ -1,0 +1,14 @@
+expr "a" != "A"i
+op Strings: == igual
+            != distinto
+             < menor
+            <= menor igual
+            >= mayor igual
+             > mayor
+op int : $variable -eq 5 igual a 5
+         $variable -ne 5 distinto a 5
+         $variable -gt 5 mayor a 5
+         $variable -ge 5 mayor e igual
+         $variable -lt 5 menor a 5
+         $variable -le 5 menor e igual
+ 

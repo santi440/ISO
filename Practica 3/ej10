@@ -1,0 +1,6 @@
+#Las variables pueden ser stings nombre="Juan"
+#numeros enteros nombre=5
+#suma=((nombre + 3 ))
+#arreglos v=(uno dos a 3 21341)
+#nombre="Juan" y nombre=5 es la misma variable
+# al no definir tipo es debilmente tipado

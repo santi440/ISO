@@ -1,0 +1,114 @@
+( EXPRESIÓN )
+              La EXPRESIÓN es verdadera
+
+       ! EXPRESIÓN
+              La EXPRESIÓN es falsa
+
+       EXPRESIÓN1 -a EXPRESIÓN2
+              la EXPRESIÓN1 y la EXPRESIÓN2 son verdaderas
+
+       EXPRESIÓN1 -o EXPRESIÓN2
+              la EXPRESIÓN1 o la EXPRESIÓN2 es verdadera
+
+       -n CADENA
+              la longitud de la CADENA es distinta de cero
+
+       CADENA equivalente a -n CADENA
+
+       -z CADENA
+              la longitud de la CADENA es igual a cero
+
+       CADENA1 = CADENA2
+              las cadenas son iguales
+       CADENA1 != CADENA2
+              las cadenas no son iguales
+
+       ENTERO1 -eq ENTERO2
+              El ENTERO1 es igual a ENTERO2
+
+       ENTERO1 -ge ENTERO2
+              El ENTERO1 es mayor o igual que ENTERO2
+
+       ENTERO1 -gt ENTERO2
+              El ENTERO1 es mayor que ENTERO2
+
+       ENTERO1 -le ENTERO2
+              El ENTERO1 es menor o igual que ENTERO2
+
+       ENTERO1 -lt ENTERO2
+              El ENTERO1 es menor que ENTERO2
+
+       ENTERO1 -ne ENTERO2
+              el ENTERO1 no es igual a ENTERO2
+
+       FICHERO1 -ef FICHERO2
+              El  FICHERO1 y FICHERO2 tienen los mismos números de dispositivo
+
+       FICHERO1 -nt FICHERO2
+              El FICHERO1 es más moderno (fecha de modificación) que FICHERO2
+
+       FICHERO1 -ot FICHERO2
+              El FICHERO1 es más antiguo que FICHERO2
+
+       -b FICHERO
+              El FICHERO existe y es un fichero especial de bloques
+
+       -c FICHERO
+              El FICHERO existe y es un fichero especial de caracteres
+
+       -d FICHERO
+              El FICHERO existe y es un directorio
+
+       -e FICHERO
+              El FICHERO existe
+
+       -f FICHERO
+              El FICHERO existe y es un fichero regular
+       
+       -g FICHERO
+              El FICHERO existe y tiene cambio-de-ID-de-grupo
+
+       -G FICHERO
+              El FICHERO existe y su propietario es el ID efectivo de grupo
+
+       -h FICHERO
+              El FICHERO existe y es un enlace simbólico (igual que -L)
+
+       -k FICHERO
+              El FICHERO existe y tiene activo su bit `sticky'
+
+       -L FICHERO
+              El FICHERO existe y es un enlace simbólico (igual que -h)
+
+       -N FICHERO
+              El ARCHIVO existe y ha sido modificado desde la última  vez  que
+              fue leído
+
+       -O FICHERO
+              El FICHERO existe y su propietario es el ID efectivo de usuario
+  
+       -p FICHERO
+              El FICHERO existe y es una tubería nombrada (named pipe)
+
+       -r FICHERO
+              El ARCHIVO existe y es un archivo regular
+
+       -s FICHERO
+              El FICHERO existe y tiene un tamaño mayor que cero
+
+       -S FICHERO
+              El FICHERO existe y es un `socket'
+
+       -t DF  el  descriptor  de fichero DF (salida estándar por omisión) está
+              abierto en una terminal
+
+       -u FICHERO
+              El FICHERO existe  y  su  bit  de  cambio-de-ID-de-usuario  está
+              activo
+
+       -w FICHERO
+              El ARCHIVO existe y el usuario tiene derecho de escritura
+
+       -x FICHERO
+              El  ARCHIVO existe y el usuario tiene derecho de ejecución sobre
+              él (o de atravesarlo si es un directorio).
