@@ -38,4 +38,4 @@ while [ $script -ne $opcion ] ; do
 		echo $(./${array[$script]} $parametros)
 		show
 	fi
-done	
+done

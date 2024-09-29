@@ -1,5 +1,5 @@
 #!/bin/bash
-#echo $# 
+#echo $#
 #Al enviar * manda todos los archivos, ese caso es "*"
 if [ $# -eq 3 ] ; then
 	case $3 in

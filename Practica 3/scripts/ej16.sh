@@ -13,8 +13,7 @@ do
 	if [ -d $directorio ] ; then
 		cant=$( ls -R $directorio | grep   "$1"  | wc -l ) 
 		if [ $cant -gt 0 ] ;then 
-			echo "$usuario : $cant " >> /home/iso/practica-shell-script/reportes.txt
+			echo "$usuario : $cant " >> "`pwd`/reportes.txt"
 		fi
 	fi
 done
-exit 0 

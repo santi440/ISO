@@ -3,19 +3,18 @@ if [ $# -ne 3 ] ; then
 	echo "Parametros invalidos"	
 	exit 1
 fi
-if [ -d $1 ] ; then
-	cd $1
-	echo "Me movi a `$1`"
+if [ -d "$1" ] ; then
+	echo "Me muevo a $1"
 	if [ $2 == "-a" ] ; then
 		for elem in `ls`
 		do
-			echo $elem 
-			mv $elem $elem$3   	
+			echo $elem
+			mv $elem $elem$3
 		done
 	elif [ $2 == "-b" ] ; then
 		for elem in `ls`
 		do
-			mv $elem $3$elem 
+			mv $elem $3$elem
 		done
 	else
 		echo "Parametro no conocido"
