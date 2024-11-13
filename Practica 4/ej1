@@ -1,0 +1,31 @@
+Responda en forma sintética sobre los siguientes conceptos:
+(a) Programa y Proceso.
+    Programa: Refiere al archivo en memoria, estatico que existe desde que se edita hasta que se borra. No tiene program counter
+    Proceso: Refiere a la representacion dinamica del programa, tiene Program Counter e involucra desde que se ejecuta hasta que termina.
+
+(b) Defina Tiempo de retorno (TR) y Tiempo de espera (TE) para un Job.
+    Tiempo de Retorno: tiempo que transcurre entre que el proceso llega al sistema hasta que completa su ejecución.
+    Tiempo de espera: tiempo que transcurre donde el proceso no esta ejecutandose, incluye el tiempo de waiting de I/O y el tiempo que compite por CPU. es decir el tiempo que pasa sin ejecutarse (TR - Tcpu)
+(c) Defina Tiempo Promedio de Retorno (TPR) y Tiempo promedio de espera (TPE) para un lote de JOBS.
+    Tiempo Promedio de Retorno (TPR):Representa el tiempo total que cada trabajo tarda desde que llega al sistema hasta que se completa.
+        TPR=∑(TiempodeRetornodecadaJOB)​/ N de JOBS
+    Tiempo Promedio de Espera (TPE): Mide el tiempo total que cada trabajo pasa esperando para ser procesado, sin incluir el tiempo de ejecución.
+        TPE=∑(Tiempo  de  Espera  de  cada  JOB)/ N  de  JOBS
+Estas métricas ayudan a evaluar la eficiencia del sistema: un TPR bajo indica que los trabajos terminan rápidamente, y un TPE bajo implica que los trabajos esperan poco tiempo en cola antes de ejecutarse.
+(d) ¿Qué es el Quantum?
+    Quantum (Q): medida que determina cuanto tiempo podría usar el procesador cada proceso:
+        • Pequeño: overhead de context switch
+        • Grande: Menos cambios de contexto,lo que reduce el tiempo empleado en cambios de contexto y, por ende, mejora la eficiencia general de la CPU.
+                  Mejor para trabajos largos: Los procesos con tiempos de ejecución largos pueden terminar más rápidamente porque pasan más tiempo en la CPU.
+                  Mayor tiempo de respuesta para procesos interactivos: Para procesos que requieren responder rápidamente (como aplicaciones interactivas o de usuario), un quantum grande puede hacer que la respuesta sea más lenta, ya que los procesos pueden esperar más tiempo para ser atendidos.
+(e) ¿Qué significa que un algoritmo de scheduling sea apropiativo o no apropiativo (Preemptive o Non-Preemptive)?
+    Nonpreemptive: una vez que un proceso esta en estado de ejecución, continua hasta que termina o se bloquea por algún evento (e.j. I/O)
+    Preemptive: el proceso en ejecución puede ser interrumpido (otro de mayor prioridad o fin de Quantum) y llevado a la cola de listos:
+        • Mayor overhead pero mejor servicio
+        • Un proceso no monopoliza el procesado
+(f) ¿Qué tareas realizan?:
+    i. Short Term Scheduler: determina que proceso pasará a ejecutarse (ready -> running)
+    ii. Long Term Scheduler : Admite nuevos procesos a memoria, de estado new a ready (aumenta el grado de multirpogramación)
+    iii. Medium Term Scheduler: Realiza el swapping (intercambio) entre el disco y la memoria cuando el SO lo determina (puede disminuir el grado de multiprogramación)
+(g) ¿Qué tareas realiza el Dispatcher?
+    El encargado de pasar a ejecución el proceso seleccionado por el short Scheduler.

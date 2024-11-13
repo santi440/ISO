@@ -4,6 +4,7 @@ if [ $# -ne 3 ] ; then
 	exit 1
 fi
 if [ -d "$1" ] ; then
+    cd $1 
 	echo "Me muevo a $1"
 	if [ $2 == "-a" ] ; then
 		for elem in `ls`

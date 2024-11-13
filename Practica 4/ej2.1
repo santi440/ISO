@@ -1,0 +1,61 @@
+(MUCHOS ESTAN EN LA PRACTICA 2, excepto los ultimos 3, se lo mande a Chat GPT para no repetir todo otra vez) 
+
+i. top
+
+    Descripción: Este comando muestra en tiempo real los procesos que se están ejecutando en el sistema, junto con detalles como el uso de CPU, memoria y tiempo de ejecución.
+    Funcionalidad: Permite monitorear los procesos en ejecución y, opcionalmente, finalizar o cambiar la prioridad de algunos. Muestra información como la carga del sistema y el uso de recursos por proceso.
+    Instalación: Viene instalado por defecto en la mayoría de las distribuciones de Linux.
+
+ii. htop
+
+    Descripción: Similar a top, pero con una interfaz más amigable y opciones de navegación más avanzadas.
+    Funcionalidad: Ofrece una visualización en tiempo real de los procesos con colores y gráficos que facilitan la interpretación de datos sobre la CPU, memoria y carga del sistema. Permite ordenar y filtrar procesos.
+    Instalación: Puede requerir instalación con sudo apt install htop en Debian/Ubuntu o sudo dnf install htop en Fedora.
+
+iii. ps
+
+    Descripción: Lista los procesos en ejecución en el sistema o en una terminal específica.
+    Funcionalidad: Útil para ver detalles de procesos específicos. ps aux muestra todos los procesos, mientras que ps -ef también es común para ver procesos con el usuario y comando ejecutado.
+    Instalación: Viene instalado por defecto en la mayoría de las distribuciones.
+
+iv. pstree
+
+    Descripción: Muestra los procesos en ejecución en un formato de árbol, indicando las relaciones entre ellos.
+    Funcionalidad: Ayuda a visualizar la jerarquía y organización de los procesos, mostrando cuáles son hijos de otros y qué procesos iniciaron otros procesos.
+    Instalación: Puede requerir instalación con sudo apt install pstree o sudo yum install pstree.
+
+v. kill
+
+    Descripción: Envía señales a los procesos, generalmente para terminarlos.
+    Funcionalidad: Por defecto, envía la señal SIGTERM, que pide al proceso que finalice de forma controlada. Se puede utilizar kill -9 para enviar SIGKILL, que fuerza la finalización inmediata.
+    Instalación: Viene por defecto en todas las distribuciones de Linux.
+
+vi. pgrep
+
+    Descripción: Busca procesos por nombre o patrones.
+    Funcionalidad: Útil para encontrar el ID de proceso (PID) de programas específicos sin necesidad de usar ps y grep combinados.
+    Instalación: Puede requerir instalación en algunas distribuciones con sudo apt install procps o sudo yum install procps.
+
+vii. killall
+
+    Descripción: Termina todos los procesos que coincidan con un nombre específico.
+    Funcionalidad: Similar a kill, pero funciona por nombre de proceso en lugar de por PID, lo cual permite finalizar múltiples instancias de un proceso de una vez.
+    Instalación: Puede requerir instalación con sudo apt install psmisc o sudo yum install psmisc.
+
+viii. renice
+
+    Descripción: Cambia la prioridad de un proceso en ejecución.
+    Funcionalidad: Ajusta el valor de "nice" de un proceso, modificando su prioridad de acceso a la CPU. Los valores van de -20 (mayor prioridad) a 19 (menor prioridad).
+    Instalación: Viene por defecto en la mayoría de distribuciones de Linux.
+
+ix. xkill
+
+    Descripción: Cierra una ventana gráfica al hacer clic en ella.
+    Funcionalidad: Al ejecutarlo, cambia el cursor a una "X" o "calavera" para seleccionar la ventana que se desea cerrar, enviando la señal SIGKILL al proceso.
+    Instalación: Puede requerir instalación con sudo apt install x11-utils en sistemas basados en Debian.
+
+x. atop
+
+    Descripción: Monitor de rendimiento avanzado similar a top, pero con más detalles sobre el uso de recursos y opciones de registro.
+    Funcionalidad: Muestra información en tiempo real de CPU, memoria, disco y red para cada proceso. También puede registrar información para análisis posterior.
+    Instalación: Puede requerir instalación con sudo apt install atop o sudo yum install atop.

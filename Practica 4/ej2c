@@ -1,0 +1,11 @@
+i. ¿Qué valores se muestran por consola?
+    "Proceso 1"
+ii. ¿Todas las líneas tendrán el mismo valor o algunas líneas tendrán valores distintos?.
+    Todas las lineas (una por proceso) deberia de ser el mismo output, el codigo es igual y las variables no se comparten entre procesos hijos y padres, los hijos toman el valor de la variable al momento de hacer el fork() y p=0
+
+iii. ¿Cuál es el valor (o valores) que aparece?. Ejecute el programa y compruebe si su
+respuesta es correcta, Modifique el valor del bucle for y el lugar dónde se incrementa
+la variable p y compruebe los nuevos resultados.
+    Va a mostrar el valor "Proceso 1" x7 veces. 
+- Si el incremento se cambia antes de hacer el for: el padre tendra 1 y los hijos 2.
+- Si el incremento se realiza dentro del for: Todos tendran 3, veces que se ejecuta el for
