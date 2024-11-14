@@ -30,5 +30,30 @@ Esta información se almacena en la PCB, Process Control Block, estructura conoc
 - CPU Bound: un proceso es CPU bound si requiere principalmente el uso de la CPU para realizar cálculos y procesamiento intensivo. Estos procesos pasan la mayor parte de su tiempo ejecutando instrucciones de la CPU.
 - I/O Bound: un proceso es I/O bound si depende en gran medida de operaciones de entrada/salida (como leer de un archivo o interactuar con un dispositivo). Estos procesos suelen estar en espera de recursos de E/S más tiempo que utilizando la CPU.
 (g) ¿Cuáles son los estados posibles por los que puede atravesar un proceso?
+Estados posibles de un proceso
+
+Los estados comunes por los que puede atravesar un proceso son:
+
+    Nuevo (New): Cuando se crea un proceso, inicia en este estado.
+    Listo (Ready): El proceso está preparado para ejecutar, pero está esperando ser asignado al procesador.
+    Ejecución (Running): El proceso está siendo ejecutado activamente por la CPU.
+    Espera (Waiting o Blocked): El proceso está detenido, esperando que ocurra un evento externo (por ejemplo, la llegada de datos desde un dispositivo de E/S).
+    Swapeado: Puede dividirse en 2(ready-swap y sleep-swap), inplica que el proceso esta en memoria secundaria porque se creó y no habia suficiente memoria, se determino que habia que bajar el grado de multiprogramacion o termino su E/S y espera memoria
+    Terminado (Exit): El proceso ha completado su ejecución y se encuentra en este estado hasta que se liberen sus recursos.
+
+potencialmente pueden haber otros como el swap
+
 (h) Explique mediante un diagrama las posibles transiciones entre los estados.
+    No puedo dibujar aca flaco. 
+    Nuevo → Listo: Al crearse un proceso, pasa de "Nuevo" a "Listo" cuando está preparado para ejecutarse y empieza a competir por CPU.
+    Nuevo → Swap: Está preparado para ejecutarse pero no hay suficiente memoria.
+    Swap → Listo: Se libero memoria y el loader carga el proceso en memoria.
+    Listo → Ejecución: El short scheduler asigna CPU al proceso, y el proceso pasa a estado de "Ejecución", realizando su tarea.
+    Ejecución → Espera: Si el proceso necesita esperar un evento externo (como E/S), pasa al estado de "Espera".
+    Espera → Listo: Una vez que el evento se cumple, el proceso vuelve a estar "Listo" para ejecutarse.
+    Ejecución → Terminado: Cuando el proceso termina su ejecución, pasa al estado de "Terminado".
+    Ejecución → Listo: Si el proceso es interrumpido (por ejemplo, porque terminó su tiempo de CPU asignado en un sistema multitarea), vuelve a "Listo".
 (i) ¿Que scheduler de los mencionados en 1 f se encarga de las transiciones?
+    Transición de Nuevo a Listo o Swap: El scheduler de largo plazo se encarga de aumentar el grado de multiprogramción.
+    Transición de Listo a Ejecución: El scheduler de corto plazo o planificador de CPU es responsable de decidir cuál proceso en la cola de listos se ejecutará a continuación.
+    Transición de Swap a Listo y viceversa: Aquí actúa el scheduler de medio plazo en algunos sistemas operativos, que decide cuándo un proceso en espera debe volver a estar listo, especialmente en sistemas de memoria virtual y paginación.
